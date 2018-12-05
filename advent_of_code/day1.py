@@ -1,15 +1,8 @@
 import os
 from itertools import cycle
-import numpy as np
 
 def freq_addition(freq_changes):
-    """
-    Starting at 0, add value of each item in list and return final result.
-    """
-    init_freq = 0
-    for freq in freq_changes:
-        init_freq += freq
-    return init_freq
+    return sum(freq_changes)
 
 def repeat_freq(freq_changes):
     observed_freqs = {0}
@@ -24,7 +17,5 @@ def repeat_freq(freq_changes):
 if __name__ == "__main__":
     INPUT_PATH = os.path.join(os.pardir, "input", "day1", "input.txt")
     freq_changes = [int(x) for x in open(INPUT_PATH).readlines()]
-    freq_addition_result = freq_addition(freq_changes)
-    print(freq_addition_result) #Print the final result
-    part_2 = repeat_freq(freq_changes)
-    print(part_2)
+    print(f"Final frequency: {freq_addition(freq_changes)}")
+    print(f"First repeated frequency: {repeat_freq(freq_changes)}")
