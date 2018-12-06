@@ -5,13 +5,13 @@ class Day2Tests(unittest.TestCase):
 
     def test_checksum(self):
         INPUT = [
-        list("abcdef"),
-        list("bababc"),
-        list("abbcde"),
-        list("abcccd"),
-        list("aabcdd"),
-        list("abcdee"),
-        list("ababab")
+        "abcdef",
+        "bababc",
+        "abbcde",
+        "abcccd",
+        "aabcdd",
+        "abcdee",
+        "ababab"
         ]
         print(INPUT)
         self.assertTrue(day2.checksum(INPUT) == 12,
