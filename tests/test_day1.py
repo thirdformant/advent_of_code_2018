@@ -30,5 +30,5 @@ class Day1Tests(unittest.TestCase):
 def main():
     unittest.main()
 
-if __name__ == "main":
+if __name__ == "__main__":
     main()
