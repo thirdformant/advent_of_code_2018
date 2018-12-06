@@ -17,6 +17,19 @@ class Day2Tests(unittest.TestCase):
         self.assertTrue(day2.checksum(INPUT) == 12,
                         msg="Checksum != 12")
 
+    def test_pairwise(self):
+        INPUT = [
+        "abcde",
+        "fghij",
+        "klmno",
+        "pqrst",
+        "fguij",
+        "axcye",
+        "wvxyz"
+        ]
+        self.assertTrue(day2.pairwise(INPUT) == "fgij",
+                        msg="ID overlap != fgij")
+
 def main():
     unittest.main()
 
